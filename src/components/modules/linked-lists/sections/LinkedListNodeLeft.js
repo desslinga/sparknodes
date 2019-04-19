@@ -5,24 +5,32 @@ class LinkedListNodeLeft extends React.Component {
     return (
       <div>
         <h3>
-          Nodes
+          Parts of a Linked List
         </h3>
         <p>
-          Each element (we will call it a node) of a list is
-          comprising of two items - the data and a reference
-          to the next node. The last node has a reference to null.
-          The entry point into a linked list is called the head
-          of the list. It should be noted that head is not a
-          separate node, but the reference to the first node.
-          If the list is empty then the head is a null reference.
+          <b>Node: </b>
+          a data structure that makes up a linked list. It contains a
+          value, and a pointer to the next node.
         </p>
         <p>
-          In Java you are allowed to define a class (say, B)
-          inside of another class (say, A). The class A is called
-          the outer class, and the class B is called the inner class.
-          The purpose of inner classes is purely to be used
-          internally as helper classes. Here is the LinkedList
-          class with the inner Node class
+          <b>Value: </b>
+          the data that is stored in a particular node.
+        </p>
+        <p>
+          <b>Next: </b>
+          a reference stored in a particular node, which is a pointer
+          to the next node in the list.
+        </p>
+        <p>
+          <b>Head: </b>
+          points to the first element of the linked list. It doesn't hold
+          any data of it's own. It is simple a reference.
+        </p>
+        <p>
+          <b>Tail: </b>
+          points to the last element of a linked list. It doesn't hold any
+          data of it's own. Some linked list implementations don't have
+          tails.
         </p>
       </div>
     );

@@ -11,39 +11,37 @@ class LinkedListIntroLeft extends React.Component {
           Introduction
         </h4>
         <p>
-          Each element (we will call it a node) of a list is
-          comprising of two items - the data and a reference
-          to the next node. The last node has a reference to null.
-          The entry point into a linked list is called the head
-          of the list. It should be noted that head is not a
-          separate node, but the reference to the first node.
-          If the list is empty then the head is a null reference.
+          A linked list is a sequence of data structures that are
+          connected to each other.
+        </p>
+        <p>
+          A linked list is a sequence of nodes, each of which contain
+          items. Each node also contains a pointer to another node
+          (the next one in the list).
         </p>
         <h4>
-          Types of Linked Lists
+          Learning Goals
         </h4>
         <p>
-          A singly linked list is described above
-        </p>
-        <p>
-          A doubly linked list is a list that has two references,
-          one to the next node and another to previous node.
-        </p>
-        <p>
-          Another important type of a linked list is called a
-          circular linked list where last node of the list points
-          back to the first node (or the head) of the list.
-        </p>
-        <h4>
-          The Node class
-        </h4>
-        <p>
-          In Java you are allowed to define a class (say, B)
-          inside of another class (say, A). The class A is called
-          the outer class, and the class B is called the inner class.
-          The purpose of inner classes is purely to be used
-          internally as helper classes. Here is the LinkedList
-          class with the inner Node class
+          <ol>
+            <li>
+              Know about different types of linked lists,
+              including singly, doubly, circular linked lists.
+            </li>
+            <li>
+              Know about all the parts of linked lists, such
+              as node, value, next, head, and tail, and
+              each of their purposes.
+            </li>
+            <li>
+              Know about different operations on linked lists,
+              such as insert, delete, search, and more.
+            </li>
+            <li>
+              Know how to implement linked list operations
+              in different programming languages.
+            </li>
+          </ol>
         </p>
       </div>
     );

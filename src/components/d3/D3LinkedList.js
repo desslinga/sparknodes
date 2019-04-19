@@ -14,23 +14,29 @@ class D3LinkedList extends React.Component {
       .attr("width", this.props.width)
       .attr("height", this.props.height);
 
-    svg.selectAll("rect")
+    const divs = svg.selectAll("rect")
       .data(data)
-      .enter()
-      .append("rect")
-      .attr("x", (d, i) => i * 70)
+      .enter();
+
+    divs.append("rect")
+      .attr("x", (d, i) => i * 75)
       .attr("y", 0)
       .attr("rx", 5)
       .attr("ry", 5)
       .attr("width", 60)
       .attr("height", 60)
-      .attr("fill", "#a5ba94")
-      .append("svg:line")
-      .attr("x1", (d, i) => i * 140)
-      .attr("x2", (d, i) => i * 170)
-      .attr("y1", 0)
-      .attr("y2", 0)
-      .attr("stroke", "white");
+      .attr("fill", "#a5ba94");
+
+    divs.append("svg:line")
+      .attr("x1", (d, i) => d * 75 + 60 )
+      .attr("x2", (d, i) => d * 75 + 75 )
+      .attr("y1", 30)
+      .attr("y2", 30)
+      .attr("stroke", "#a5ba94");
+
+    console.log(svg.selectAll("rect"));
+
+
   }
 
   render() {
