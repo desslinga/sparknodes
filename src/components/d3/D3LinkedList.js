@@ -7,22 +7,30 @@ class D3LinkedList extends React.Component {
   }
 
   drawChart() {
-    const data = this.props.data;
+    const data = [0,1,2,3,4,5];
 
     const svg = d3.select("#d3-linkedlist")
       .append("svg")
       .attr("width", this.props.width)
       .attr("height", this.props.height);
-      
+
     svg.selectAll("rect")
       .data(data)
       .enter()
       .append("rect")
       .attr("x", (d, i) => i * 70)
-      .attr("y", (d, i) => this.props.height - 10 * d)
-      .attr("width", 65)
-      .attr("height", (d, i) => d * 10)
-      .attr("fill", "green");
+      .attr("y", 0)
+      .attr("rx", 5)
+      .attr("ry", 5)
+      .attr("width", 60)
+      .attr("height", 60)
+      .attr("fill", "#a5ba94")
+      .append("svg:line")
+      .attr("x1", (d, i) => i * 140)
+      .attr("x2", (d, i) => i * 170)
+      .attr("y1", 0)
+      .attr("y2", 0)
+      .attr("stroke", "white");
   }
 
   render() {
