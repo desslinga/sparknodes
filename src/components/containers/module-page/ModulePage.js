@@ -39,7 +39,6 @@ class ModulePage extends React.Component {
             <LinkedListNodeLeft/>
           </ModuleLeftPage>
           <ModuleRightPage>
-            <LinkedListIntroRight/>
           </ModuleRightPage>
         </div>
       </div>
