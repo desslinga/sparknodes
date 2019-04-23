@@ -22,6 +22,17 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
+.middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.relative {
+  position: relative;
+}
+
 .landing {
   transition: $mid-ease;
   width: 90vw;
@@ -30,12 +41,6 @@ html, body {
   //padding-bottom: 6vh;
   animation: $a-fade-from-down;
   @extend .overflow-scrolling-touch;
-  & .middle {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-  }
   & .top {
     padding-top: 3vh;
   }
@@ -55,6 +60,10 @@ html, body {
       color: $off-black;
     }
   }
+}
+
+.container-width {
+  width: 100%;
 }
 
 .full-width {

@@ -3,8 +3,8 @@ import D3LinkedList from '../../../d3/D3LinkedList';
 
 class LinkedListIntroRight extends React.Component {
   state = {
-    width: 700,
-    height: 500
+    width: '100%',
+    height: '100%'
   }
   render() {
     return (
