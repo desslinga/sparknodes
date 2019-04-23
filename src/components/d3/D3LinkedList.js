@@ -1,6 +1,6 @@
 import React from 'react';
 import * as d3 from "d3";
-import { roundedSquare } from './D3Shapes';
+import { roundedSquare, roundedRectTop } from './D3Shapes';
 
 class D3LinkedList extends React.Component {
   componentDidMount() {
@@ -25,18 +25,21 @@ class D3LinkedList extends React.Component {
       .append("g");
 
     divs.append("path")
-    .attr("d", (d, i) => roundedSquare(
-      i * (nodeEdgeLength), 0, nodeWidth, 5, true))
-    .attr("fill", "#a5ba94");
+      .attr("d", (d, i) =>
+        roundedSquare(i * nodeEdgeLength, 0, nodeWidth, 5, true))
+      .attr("fill", "#7AB1C2");
+
+    divs.append("path")
+      .attr("d", (d, i) =>
+        roundedRectTop(i * nodeEdgeLength, 0, nodeWidth, nodeWidth/2, 5))
+      .attr("fill", "#A0D3E3");
 
     divs.append("svg:line")
       .attr("x1", (d, i) => d * nodeEdgeLength + nodeWidth)
       .attr("x2", (d, i) => d * nodeEdgeLength + nodeEdgeLength)
-      .attr("y1", nodeWidth / 2)
-      .attr("y2", nodeWidth / 2)
-      .attr("stroke", "#a5ba94");
-
-    console.log(svg.selectAll("rect"));
+      .attr("y1", nodeWidth / 4)
+      .attr("y2", nodeWidth / 4)
+      .attr("stroke", "#A0D3E3");
 
   }
 

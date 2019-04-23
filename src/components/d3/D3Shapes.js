@@ -21,6 +21,6 @@ export const roundedSquare = (x, y, w, r, br) => {
   return roundedRect(x, y, w, w, r, br, br, br, br);
 }
 
-export const roundedSquareTop = (x, y, w, r) => {
-  return roundedRect(x, y, w, w, r, true, true, false, false);
+export const roundedRectTop = (x, y, w, h, r) => {
+  return roundedRect(x, y, w, h, r, true, true, false, false);
 }
