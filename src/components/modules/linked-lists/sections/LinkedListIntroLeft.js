@@ -20,25 +20,25 @@ class LinkedListIntroLeft extends React.Component {
           (the next one in the list).
         </p>
         <h4>
-          Learning Goals
+          What you'll learn
         </h4>
         <p>
           <ol>
             <li>
-              Know about different types of linked lists,
-              including singly, doubly, circular linked lists.
+              Types of linked lists, including singly, doubly, circular
+              linked lists.
             </li>
             <li>
-              Know about all the parts of linked lists, such
+              All the parts of linked lists, such
               as node, value, next, head, and tail, and
               each of their purposes.
             </li>
             <li>
-              Know about different operations on linked lists,
-              such as insert, delete, search, and more.
+              Operations on linked lists, such as insert, delete, search,
+              and more.
             </li>
             <li>
-              Know how to implement linked list operations
+              Implementing linked list operations
               in different programming languages.
             </li>
           </ol>
