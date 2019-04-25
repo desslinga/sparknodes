@@ -17,10 +17,11 @@ export const roundedRect = (x, y, w, h, r, tl, tr, bl, br) => {
   return retval;
 };
 
-export const roundedSquare = (x, y, w, r, br) => {
-  return roundedRect(x, y, w, w, r, br, br, br, br);
-}
+export const roundedRectUniformBr = (x, y, w, h, r) =>
+  roundedRect(x, y, w, h, r, true, true, true, true);
 
-export const roundedRectTop = (x, y, w, h, r) => {
-  return roundedRect(x, y, w, h, r, true, true, false, false);
-}
+export const roundedSquare = (x, y, w, r, br) =>
+  roundedRect(x, y, w, w, r, br, br, br, br);
+
+export const roundedRectTop = (x, y, w, h, r) =>
+  roundedRect(x, y, w, h, r, true, true, false, false);

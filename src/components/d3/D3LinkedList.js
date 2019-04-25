@@ -1,6 +1,10 @@
 import React from 'react';
 import * as d3 from "d3";
-import { roundedSquare, roundedRectTop } from './D3Shapes';
+import {
+  roundedSquare,
+  roundedRectTop,
+  roundedRectUniformBr
+} from './D3Shapes';
 
 class D3LinkedList extends React.Component {
   componentDidMount() {
@@ -13,6 +17,9 @@ class D3LinkedList extends React.Component {
     const edgeLength = 30;
     const nodeEdgeLength = nodeWidth + edgeLength;
     const nodeBorderRadius = 8;
+    const nodeOffset = 130;
+
+    const tooltipBorderRadius = 3;
 
     const svg = d3.select("#d3-linkedlist")
       .append("svg")
@@ -27,12 +34,12 @@ class D3LinkedList extends React.Component {
 
     divs.append("path")
       .attr("d", (d, i) =>
-        roundedSquare(i * nodeEdgeLength, 0, nodeWidth, 5, true))
+        roundedSquare(i * nodeEdgeLength, nodeOffset, nodeWidth, 5, true))
       .attr("fill", "#7AB1C2");
 
     divs.append("path")
       .attr("d", (d, i) =>
-        roundedRectTop(i * nodeEdgeLength, 0, nodeWidth, nodeWidth/2, 5))
+        roundedRectTop(i * nodeEdgeLength, nodeOffset, nodeWidth, nodeWidth/2, 5))
       .attr("fill", "#A0D3E3");
 
     const paintNode = (node, primary, secondary) => {
@@ -42,8 +49,9 @@ class D3LinkedList extends React.Component {
         .attr("fill", secondary);
     }
 
-    const headNode = divs.filter((d, i) => i === 0)
-      .selectAll("path");
+    const headNodeGroup = divs.filter((d, i) => i === 0);
+
+    const headNode = headNodeGroup.selectAll("path");
     paintNode(headNode, '#85B688', '#A1D2A4');
 
     const tailNode = divs.filter((d, i) => i === data.length - 1)
@@ -53,10 +61,15 @@ class D3LinkedList extends React.Component {
     divs.append("svg:line")
       .attr("x1", (d, i) => d * nodeEdgeLength + nodeWidth)
       .attr("x2", (d, i) => d * nodeEdgeLength + nodeEdgeLength)
-      .attr("y1", nodeWidth / 3)
-      .attr("y2", nodeWidth / 3)
+      .attr("y1", nodeOffset + nodeEdgeLength / 4)
+      .attr("y2", nodeOffset + nodeEdgeLength / 4)
       .attr("stroke", "#A0D3E3")
       .attr("stroke-width", "2");
+
+    headNodeGroup.append("path")
+      .attr("d", (d, i) => roundedRectUniformBr(
+        i * nodeEdgeLength, 0, 180, 70, tooltipBorderRadius))
+      .attr("fill", '#ffffff');
 
   }
 
