@@ -5,7 +5,7 @@ class LinkedListPartsLeft extends React.Component {
     return (
       <div>
         <h3>
-          Linked List Parts
+           Parts
         </h3>
         <p>
           A good way to learn about linked lists is first knowing about what
