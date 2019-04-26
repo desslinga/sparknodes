@@ -7,6 +7,7 @@ import ModuleSectionList from '../ModuleSectionList';
 import LinkedListIntroLeft from '../../modules/linked-lists/sections/LinkedListIntroLeft';
 import LinkedListIntroRight from '../../modules/linked-lists/sections/LinkedListIntroRight';
 import LinkedListPartsLeft from '../../modules/linked-lists/sections/LinkedListPartsLeft';
+import LinkedListOperationsLeft from '../../modules/linked-lists/sections/LinkedListOperationsLeft';
 import LinkedListSinglyIntroLeft from '../../modules/linked-lists/sections/LinkedListSinglyIntroLeft';
 import LinkedListSinglyInsertLeft from '../../modules/linked-lists/sections/LinkedListSinglyInsertLeft';
 
@@ -41,6 +42,11 @@ class ModulePage extends React.Component {
           </ModuleRightPage>
           <ModuleLeftPage>
             <LinkedListPartsLeft/>
+          </ModuleLeftPage>
+          <ModuleRightPage>
+          </ModuleRightPage>
+          <ModuleLeftPage>
+            <LinkedListOperationsLeft/>
           </ModuleLeftPage>
           <ModuleRightPage>
           </ModuleRightPage>
