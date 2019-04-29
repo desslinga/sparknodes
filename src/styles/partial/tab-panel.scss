@@ -1,0 +1,12 @@
+.tab {
+  background-color: $darker-purple;
+  border-top-left-radius: $br;
+  border-top-right-radius: $br;
+  color: $off-white;
+  height: 2rem;
+  line-height: 2rem;
+  cursor: pointer;
+  &.active {
+    background-color: $dark-purple;
+  }
+}

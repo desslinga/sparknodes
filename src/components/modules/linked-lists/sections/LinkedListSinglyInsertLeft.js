@@ -3,6 +3,10 @@ import Prism from "prismjs";
 import { HGreen, HBlue, HPurple } from  '../../../fonts/moduleFonts';
 
 class LinkedListSinglyInsertLeft extends React.Component {
+  state = {
+    selectedTab: 'JavaScript'
+  };
+
   componentDidMount() {
     Prism.highlightAll();
   }
@@ -16,6 +20,10 @@ class LinkedListSinglyInsertLeft extends React.Component {
  }`
     )
   };
+
+  tabSelect(tabLabel) {
+    console.log(tabLabel);
+  }
 
   render() {
     return (
@@ -41,6 +49,22 @@ class LinkedListSinglyInsertLeft extends React.Component {
             </li>
           </ol>
         </p>
+        <div className="container-fluid">
+          <div className="row">
+            <div
+              className="col-4 tab active"
+              onClick={() => this.tabSelect('Javascript')}
+            >Javascript</div>
+            <div
+              className="col-4 tab"
+              onClick={() => this.tabSelect('Java')}
+            >Java</div>
+            <div
+              className="col-4 tab"
+              onClick={() => this.tabSelect('Python')}
+            >Python</div>
+          </div>
+        </div>
         <pre className="language-javascript">
           <code>
            {this.jsBlock()}
