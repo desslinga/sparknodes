@@ -11,6 +11,7 @@ import LinkedListOperationsLeft from '../../modules/linked-lists/sections/Linked
 import LinkedListOperations2Left from '../../modules/linked-lists/sections/LinkedListOperations2Left';
 import LinkedListSinglyIntroLeft from '../../modules/linked-lists/sections/LinkedListSinglyIntroLeft';
 import LinkedListSinglyInsertLeft from '../../modules/linked-lists/sections/LinkedListSinglyInsertLeft';
+import LinkedListSinglyDeleteLeft from '../../modules/linked-lists/sections/LinkedListSinglyDeleteLeft';
 
 import MenuToggleButton from '../../ui/MenuToggleButton';
 
@@ -63,6 +64,11 @@ class ModulePage extends React.Component {
           </ModuleRightPage>
           <ModuleLeftPage>
             <LinkedListSinglyInsertLeft/>
+          </ModuleLeftPage>
+          <ModuleRightPage>
+          </ModuleRightPage>
+          <ModuleLeftPage>
+            <LinkedListSinglyDeleteLeft/>
           </ModuleLeftPage>
           <ModuleRightPage>
           </ModuleRightPage>
