@@ -1,32 +1,28 @@
 import React from 'react';
+import Prism from "prismjs";
 import { HGreen, HBlue, HPurple } from  '../../../fonts/moduleFonts';
 
 class LinkedListSinglyInsertLeft extends React.Component {
+  componentDidMount() {
+    Prism.highlightAll();
+  }
+
+  jsBlock() {
+    return (
+`function insert(head, value) {
+    let newNode = new Node(value);
+    newNode.next = head;
+    head = newNode;
+ }`
+    )
+  };
+
   render() {
     return (
       <div>
         <h3>
           Singly Linked List: Insert
         </h3>
-        <h4>
-          The Concerns
-        </h4>
-        <p>
-          When dealing with linked list operations, we have some things to
-          consider:
-        </p>
-        <p>
-          <ul>
-            <li>
-              <b>Relinking nodes: </b> we have to wire
-              our single links (pointers) to introduce this new node.
-            </li>
-            <li>
-              <b>Relinking head: </b> We're placing a new node to the start of
-              the linked list, so we have to repoint the <HPurple>head</HPurple>.
-            </li>
-          </ul>
-        </p>
         <h4>
           The Approach
         </h4>
@@ -45,6 +41,11 @@ class LinkedListSinglyInsertLeft extends React.Component {
             </li>
           </ol>
         </p>
+        <pre className="language-javascript">
+          <code>
+           {this.jsBlock()}
+          </code>
+        </pre>
       </div>
     );
   }
